@@ -23,8 +23,8 @@ int IsReset;
 
 const float pi = 3.14;
 
-const float R = 0.0785;
-const int N = 20;
+const float R = 0.08;
+const int N = 40;
 
 float distance = 0;
 
@@ -86,6 +86,7 @@ void loop() {
   LastState = State;
   if (digitalRead(pin3) == 0) {
   distance = 0;
+  Pos = 0;
   lcd.setCursor(0, 0);
   lcd.print("     RESET      ");
   lcd.setCursor(0, 1);
